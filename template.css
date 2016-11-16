@@ -117,6 +117,7 @@ a{
     padding-left:30%;
 }
 .list2{
+
     font-size: 110%;
     list-style-type:none;
     list-style-position: outside;
@@ -127,6 +128,7 @@ a{
     align-content:center;
     text-align:center;
     font-size:150%;
+    color: #2E5266;
 }
 .cert_img{
     display:block;
