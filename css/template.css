@@ -39,11 +39,12 @@ footer{
     opacity: .9;
 }
 .nav-row{
-    font-size:130%;
     font-weight:bold;
     color:#2E5266;
     margin-top:1em;
+    text-align:center;
     margin-bottom:1em;
+    height: 25px;
 }
 
 .nav-row a:link{
@@ -54,17 +55,73 @@ footer{
  }
  .nav-row a:hover{
      color: #007EA7;
-  }
+ }
+ .nav-link{
+    font-size:120%;
+    transition: font-size 0.2s ease;
+ }
+ .nav-link:hover{
+     font-size: 130%;
+}
 a{
     text-decoration:none;
-}
-.nav-link{
-    text-align:center;
 }
 .nav-line{
     color:#007EA7;
     opacity:0.8;
 }
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left:15px;
+    overflow: hidden;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #007EA7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {
+    display: none;
+ }
+ /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+ @media screen and (max-width:680px) {
+   ul.topnav li:not(:first-child) {display: none;}
+   ul.topnav li.icon {
+     float: right;
+     display: inline-block;
+   }
+ }
+
+ /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+ @media screen and (max-width:680px) {
+   ul.topnav.responsive {position: relative;}
+   ul.topnav.responsive li.icon {
+     position: absolute;
+     right: 0;
+     top: 0;
+   }
+   ul.topnav.responsive li {
+     float: none;
+     display: inline;
+   }
+   ul.topnav.responsive li a {
+     display: block;
+     text-align: left;
+   }
+ }
 .header_line{
     color: #161925;
     width: 47%;
@@ -96,6 +153,9 @@ a{
     text-align:center;
     margin-left:auto;
     margin-right:auto;
+}
+#summary a:link{
+    color:#007EA7;
 }
 #summary a:visited{
     color:#007EA7;
@@ -150,10 +210,13 @@ a{
     font-weight:bold;
 }
 .contact_links{
-    text-align:center;
-    font-size: 300%;
-    color:#007EA7;
-}
+     text-align:center;
+     font-size: 300%;
+     color:#007EA7;
+ }
+.contact_links a:link{
+     color:#007EA7;
+ }
 .contact_links a:visited{
     text-align:center;
     font-size: 300%;
@@ -164,5 +227,10 @@ a{
     color:#FBFEF9;
 }
 .fa-chevron-up{
+    font-size:150%;
     padding-top:30px;
+    transition: font-size 0.2s ease;
+}
+.fa-chevron-up:hover{
+    font-size: 160%;
 }
